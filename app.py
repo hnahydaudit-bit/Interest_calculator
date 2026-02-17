@@ -27,6 +27,7 @@ div[role="radiogroup"] input[type="radio"]:checked + div {
     background-color: #1e90ff !important;
     border-color: #1e90ff !important;
 }
+</style>
 """, unsafe_allow_html=True)
 
 
