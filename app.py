@@ -20,6 +20,19 @@ def get_chargeable_days(start_date: date, end_date: date) -> int:
     return max((end_date - start_date).days, 0)
 
 
+st.markdown("""
+<style>
+/* Selected radio button circle */
+div[role="radiogroup"] input[type="radio"]:checked + div {
+    background-color: #1e90ff !important;
+    border-color: #1e90ff !important;
+}
+""", unsafe_allow_html=True)
+
+
+
+
+
 def per_day_fee_input(label: str, key_prefix: str) -> float:
     """Input control that supports standard slab selection or manual fee entry."""
     mode = st.radio(
