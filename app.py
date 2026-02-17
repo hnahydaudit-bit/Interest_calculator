@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import date
 
 
-codex/create-interest-calculator-for-gst-f1nf1o
+#codex/create-interest-calculator-for-gst-f1nf1o
 st.set_page_config(page_title="GST Calculator", page_icon="💸", layout="centered")
 
 st.title("💸 GST Interest & Late Fee Calculator")
