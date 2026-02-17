@@ -39,7 +39,7 @@ with tax_col2:
     cgst = st.number_input("CGST (₹)", min_value=0.0, value=0.0, step=100.0)
 with tax_col3:
     sgst = st.number_input("SGST (₹)", min_value=0.0, value=0.0, step=100.0)
- main
+main
 
 
 def calculate_interest(amount: float, rate_percent: float, days: int) -> float:
