@@ -9,35 +9,6 @@ st.title("💸 GST Interest & Late Fee Calculator")
 st.caption("Simple calculator for GST delayed-payment interest and return-filing late fee.")
 
 
-# with st.container(border=True):
-#     col1, col2 = st.columns(2)
-
-#     with col1:
-#         due_date = st.date_input("Due date", value=date.today())
-#         payment_date = st.date_input("Payment date", value=date.today())
-
-#     with col2:
-#         annual_rate = st.number_input(
-#             "Annual interest rate (%)",
-#             min_value=0.0,
-#             max_value=100.0,
-#             value=18.0,
-#             step=0.1,
-#             help="Example: use 18 for 18% per annum.",
-#         )
-
-# st.subheader("Tax details")
-# tax_col1, tax_col2, tax_col3 = st.columns(3)
-
-# with tax_col1:
-#     igst = st.number_input("IGST (₹)", min_value=0.0, value=0.0, step=100.0)
-# with tax_col2:
-#     cgst = st.number_input("CGST (₹)", min_value=0.0, value=0.0, step=100.0)
-# with tax_col3:
-#     sgst = st.number_input("SGST (₹)", min_value=0.0, value=0.0, step=100.0)
-
-
-
 def calculate_interest(amount: float, rate_percent: float, days: int) -> float:
     """Simple interest for delayed payment based on annual rate."""
     return amount * (rate_percent / 100) * (days / 365)
@@ -135,9 +106,7 @@ with interest_tab:
         st.write(f"SGST interest: ₹{sgst_interest:,.2f}")
 
     st.success(f"Grand total payable: ₹{grand_total:,.2f}")
-    st.caption(
-        "Formula used: Interest = Tax amount × (Annual rate / 100) × (Delay days / 365)"
-    )
+    
 
 with late_fee_tab:
     with st.container(border=True):
