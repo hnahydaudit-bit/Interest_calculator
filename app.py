@@ -120,13 +120,12 @@ with late_fee_tab:
     st.subheader("Late fee per day")
     st.subheader("Late fee per day (CGST & SGST)")
     
-    late_fee_per_day = st.selectbox(
+    late_fee_per_day = st.number_input(
         "Late fee per day (₹)",
-        options=[10, 25, 50, 100],
-        index=1,
-        key="lf_common_fee",
-        help="Select a standard value or type your own amount",
-        allow_custom_value=True
+        min_value=0.0,
+        value=25.0,
+        step=1.0,
+        help="Standard values: 10, 25, 50, 100"
     )
 
 
