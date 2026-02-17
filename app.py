@@ -32,7 +32,7 @@ div[role="radiogroup"] div[data-testid="stRadio"] svg {
     fill: #1e90ff !important;
 }
 </style>
-""", unsafe_allow_html=True)s
+""", unsafe_allow_html=True)
 
 
 
