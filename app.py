@@ -187,9 +187,3 @@ total_interest = igst_interest + cgst_interest + sgst_interest
 grand_total = total_tax + total_interest
 
 
-
-
-
-
-)
-
