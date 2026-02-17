@@ -28,6 +28,7 @@ def per_day_fee_input(label: str, key_prefix: str) -> float:
         horizontal=True,
         key=f"{key_prefix}_mode",
         label_visibility="collapsed",
+        [":blue[Blue]"],
     )
 
     if mode == "Standard":
