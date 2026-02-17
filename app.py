@@ -22,13 +22,17 @@ def get_chargeable_days(start_date: date, end_date: date) -> int:
 
 st.markdown("""
 <style>
-/* Selected radio button circle */
-div[role="radiogroup"] input[type="radio"]:checked + div {
-    background-color: #1e90ff !important;
+/* Radio outer circle */
+div[role="radiogroup"] div[data-testid="stRadio"] > div {
     border-color: #1e90ff !important;
 }
+
+/* Selected radio inner dot */
+div[role="radiogroup"] div[data-testid="stRadio"] svg {
+    fill: #1e90ff !important;
+}
 </style>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)s
 
 
 
