@@ -24,7 +24,7 @@ st.markdown("""
 <style>
 /* Radio outer circle */
 div[role="radiogroup"] div[data-testid="stRadio"] > div {
-    border-color: #1e90ff !important;
+    border-color: #262730 !important;
 }
 
 /* Selected radio inner dot */
