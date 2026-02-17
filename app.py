@@ -118,11 +118,17 @@ with late_fee_tab:
             filing_date = st.date_input("Filing date", value=date.today(), key="lf_filing")
 
     st.subheader("Late fee per day")
-    fee_col1, fee_col2 = st.columns(2)
-    with fee_col1:
-        cgst_fee_per_day = per_day_fee_input("CGST", "lf_cgst")
-    with fee_col2:
-        sgst_fee_per_day = per_day_fee_input("SGST", "lf_sgst")
+    st.subheader("Late fee per day (CGST & SGST)")
+    
+    late_fee_per_day = st.selectbox(
+        "Late fee per day (₹)",
+        options=[10, 25, 50, 100],
+        index=1,
+        key="lf_common_fee",
+        help="Select a standard value or type your own amount",
+        allow_custom_value=True
+    )
+
 
     late_days_raw = (filing_date - late_fee_due_date).days
     late_days = get_chargeable_days(late_fee_due_date, filing_date)
@@ -130,8 +136,8 @@ with late_fee_tab:
     if late_days_raw < 0:
         st.warning("Filing date is before due date. No late fee is charged.")
 
-    cgst_late_fee = cgst_fee_per_day * late_days
-    sgst_late_fee = sgst_fee_per_day * late_days
+    cgst_late_fee = late_fee_per_day * late_days
+    sgst_late_fee = late_fee_per_day * late_days
     total_late_fee = cgst_late_fee + sgst_late_fee
 
     st.subheader("Late fee output")
