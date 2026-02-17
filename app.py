@@ -117,7 +117,7 @@ with late_fee_tab:
         with lf_col2:
             filing_date = st.date_input("Filing date", value=date.today(), key="lf_filing")
 
-    st.subheader("Late fee per day")
+   
     st.subheader("Late fee per day (CGST & SGST)")
     
     late_fee_per_day = st.number_input(
