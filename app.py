@@ -47,7 +47,7 @@ def calculate_interest(amount: float, rate_percent: float, days: int) -> float:
     return amount * (rate_percent / 100) * (days / 365)
 
 
- codex/create-interest-calculator-for-gst-f1nf1o
+#codex/create-interest-calculator-for-gst-f1nf1o
 def get_chargeable_days(start_date: date, end_date: date) -> int:
     """Return delay days; negatives are capped at zero."""
     return max((end_date - start_date).days, 0)
